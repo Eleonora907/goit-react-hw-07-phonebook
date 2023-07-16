@@ -9,12 +9,12 @@ export const fetchContacts = async () => {
   return data;
 };
 
-export const fetchDelete = async id => {
+export const fetchDeleteContact = async id => {
   const { data } = await contactApi.delete(`/contacts/${id}`);
   return data;
 };
 
-export const fetchAddUser = async user => {
-  const { data } = await contactApi.post(`/contacts`, user);
+export const fetchAddContact = async contact => {
+  const { data } = await contactApi.post('/contacts', contact);
   return data;
 };
